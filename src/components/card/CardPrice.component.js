@@ -5,49 +5,71 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import {Divider} from "@material-ui/core";
+import {Grid} from "@material-ui/core";
+import useStyles from "./Card.style"
 
-const useStyles = makeStyles({
+
   
 
-
-    contient:{
-        display:"flex",
-        flexDirection:"column",
-        alignItems:"center",
-        justifyContent:"space-around",
-        width:"30%",
+export default function SimpleCard(props) {
+  console.log(props)
+    const useStyles = makeStyles({
+        card:{
+            width:"10%",
+            height:props.height,
+            marginTop:props.marge,
+        },
+         Carditem: {
+            display:"flex",
+            flexDirection:"column",
+            alignItems:"center",
+            justifyContent:"space-evenly",
+            height:"70%",
+            backgroundColor:props.backGrColor,
+           },
+            divider:{
+               fontWeight:"bolder",
+               fontSize:14,
+               marginBottom:"9px",
+           },
+           contient:{
+               width:"100%",
+               borderRadius:"3%"
 
            }
-  });
-  
-
-
-export default function SimpleCard() {
+      });
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
-  
+
     return (
 
-      <Card className={classes.contient}>
-        <CardContent >
-          <Typography className={classes.title} color="textSecondary" gutterBottom>
-            Word of the Day
-          </Typography>
+        <Grid container item  justify="center"  lg={3} xs ={10} md={8} className={classes.card}>
+    <Card className={classes.contient}>
+        <CardContent className={classes.Carditem}>
           <Typography variant="h5" component="h2">
-            be{bull}nev{bull}o{bull}lent
+           {props.title}
           </Typography>
-          <Typography className={classes.pos} color="textSecondary">
-            adjective
+          <Divider />
+          <Typography  color="textSecondary" variant="h3">
+              $ {props.price}
           </Typography>
-          <Typography variant="body2" component="p">
-            well meaning and kindly.
-            <br />
-            {'"a benevolent smile"'}
+          <Divider/>
+          <Typography  component="p" className={classes.divider}>
+            {props.storage} storage
+          </Typography>
+          <Divider />
+          <Typography component="p" className={classes.divider}>
+            {props.allowed} Users allowed  
+          </Typography>
+          <Divider/>
+          <Typography component="p" className={classes.divider}>
+           Send up to  {props.toSend} GB
           </Typography>
         </CardContent>
-        <CardActions >
-          <Button size="small">Learn More</Button>
+        <CardActions style={{display:"flex",justifyContent:"center", backgroundColor:props.backGrColor}}>
+          <Button size="large" variant="contained" color="primary" style={{width:"90%"}}>Learn More</Button>
         </CardActions>
       </Card>
+      </Grid>
     );
   }
