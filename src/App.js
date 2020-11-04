@@ -1,6 +1,3 @@
-import logo from './logo.svg';
-import './App.css';
-import Card from "./components/card/CardPrice.component";
 import AllCards from "./components/card/AllCards";
 import {Typography} from "@material-ui/core";
 
@@ -9,12 +6,13 @@ function App() {
     <div style={{backgroundImage:"url(../../../bg-bottom.svg)",
                          backgroundRepeat:"no-repeat",
                          backgroundColor:"grey",
-                         height:"100vh"
+                         height:"100vh",
     }}>
-      <Typography variant="h4" style={{textAlign:"center"}}>
-        Our pricing
-      </Typography>
-      <AllCards />
+
+          <Typography variant="h4" style={{textAlign:"center"}}>
+               Our pricing
+          </Typography>
+          <AllCards />
     
     </div>
   );
