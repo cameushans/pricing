@@ -20,6 +20,7 @@ import { makeStyles } from '@material-ui/core/styles';
            card:{
                width:"100%",
                borderRadius:"3%",
+               zIndex:6
            },
            button:{
             width:"90%"

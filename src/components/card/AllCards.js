@@ -40,7 +40,11 @@ export default function Switches() {
 
   return (
       <Grid container   justify="center" >
-              <Grid container item justify="center" alignItems="center"style={{marginTop:"2%"}}> 
+              <Typography variant="h4" style={{textAlign:"center",marginTop:"4%"}}>
+                  Our pricing
+              </Typography>
+              <img src="../../../bg-top.svg" style={{position:"absolute",marginLeft:"45%",zIndex:0,width:"30%"}}/>
+              <Grid container item justify="center" alignItems="center"style={{marginBottom:"2%",marginTop:"2%"}}> 
                           <Typography >Annualy</Typography>
                           <Switch
                                               checked={state.checkedA}
@@ -50,6 +54,8 @@ export default function Switches() {
                                             />
                           <Typography>Monthly</Typography>  
               </Grid>
+              <img src="../../../bg-bottom.svg" style={{position:"absolute",marginLeft:"-40%",zIndex:0,marginTop:"30%",width:"30%"}}/>
+
 
               <Grid container item alignItems="center" justify="center">
 
