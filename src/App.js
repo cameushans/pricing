@@ -1,8 +1,11 @@
-import AllCards from "./components/card/AllCards";
+import AllCards from "./components/Allcards/AllCards.component";
+import "./App.css"
 
 function App() {
+
   return (
-    <div >
+    
+    <div className="App">
           <AllCards />
     </div>
   );

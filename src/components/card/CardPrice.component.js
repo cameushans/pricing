@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import {Grid} from "@material-ui/core";
-import useStyles from "./Card.style"
+import useStyles from "./Card.style";
 
 
   
@@ -19,7 +19,7 @@ export default function SimpleCard(props) {
             container 
             item  
             justify="center" 
-            lg={3} xs ={10} md={8} 
+            lg={3} xs ={8} md={4} 
             className={classes.contient}
             style={{ marginTop:props.marge,height:props.height}}>
 
